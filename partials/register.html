@@ -1,0 +1,17 @@
+<div ng-controller="ExampleController">
+  <form novalidate class="simple-form">
+    <input type="radio" ng-model="user.Investor" value="true" />Investor<br />
+    <input type="radio" ng-model="user.Investor" value="false" />Startup Company<br />
+    Name: <input type="text" ng-model="user.name" value="true" /><br />
+    E-mail: <input type="email" ng-model="user.email" value="true" /><br />
+    Company Name:<input type="text" ng-model="user.companyName" value="true" /><br />
+    Address: <input type="numerical" ng-model="user.address" value="true"/><br />
+    Contact Name: <input type="email" ng-model="user.contactName" value="true" /><br />
+    URL:<input type="text" ng-model="user.url" /><br />
+
+    <input type="button" ng-click="edit()" value="edit" />
+    <input type="submit" ng-click="update(user)" value="Save" />
+  </form>
+  <pre>form = {{user | password}}</pre>
+  <pre>master = {{master | password}}</pre>
+</div>

@@ -1,0 +1,39 @@
+/*Main navigation bar styling*/
+.navbar.main {
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  text-align: left;
+  background-color: #F8F8F8;
+}
+
+
+/*Top quater of page styling*/
+#Nashville{
+  background-image: url(/images/skyl.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%, 50%;
+  width: 100%;
+  height: 300px;
+  padding: 0px;
+}
+
+/*HOME PAGE STYLING*/
+#homepg{text-align: center;}
+
+/*Sticky Footer css*/
+* {
+  margin: 0;
+}
+html, body {font-style: font-family: FontAwesome;
+  height: 100%;
+}
+.wrapper {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -4em;
+}
+.footer, .push {text-align: center;
+  height: 4em;
+}

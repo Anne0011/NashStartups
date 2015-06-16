@@ -1,3 +1,3 @@
-myApp.controller('eventsCtrl', ['$scope', function($scope) {
-  $scope.greeting = 'Current Local Events';
+myApp.controller('eventsCtrl', ['$scope', function($scope, nash) {
+  $scope.greeting = 'Current Events in Nashville';
 }]);

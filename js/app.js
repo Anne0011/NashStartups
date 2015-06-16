@@ -1,4 +1,4 @@
-var myApp = angular.module('NashStartups', ['ngRoute']);
+var myApp = angular.module('nash', ['ngRoute']);
 myApp.config(function ($routeProvider) {
   $routeProvider.
     when('/', {
@@ -16,8 +16,7 @@ myApp.config(function ($routeProvider) {
     when('/startups', {
       templateUrl: 'partials/startups.html',
       controller: 'startupsCtrl'
-    }).
-    otherwise({
-      redirectTo: '/'
-    });
+      }).
+    otherwise("/");
 });
+myApp.constant('API_URL', 'https://angulartodofire.firebaseio.com');

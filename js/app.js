@@ -19,4 +19,6 @@ myApp.config(function ($routeProvider) {
       }).
     otherwise("/");
 });
-myApp.constant('API_URL', 'https://angulartodofire.firebaseio.com');
+
+
+myApp.constant('API_URL', 'https://nashstartuplist.firebaseio.com/');

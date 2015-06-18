@@ -1,4 +1,4 @@
-<div ng-controller="ExampleController">
+<div ng-controller="registerCtrl">
   <form novalidate class="simple-form">
     <input type="radio" ng-model="user.Investor" value="true" />Investor<br />
     <input type="radio" ng-model="user.Investor" value="false" />Startup Company<br />
@@ -12,6 +12,4 @@
     <input type="button" ng-click="edit()" value="edit" />
     <input type="submit" ng-click="update(user)" value="Save" />
   </form>
-  <pre>form = {{user | password}}</pre>
-  <pre>master = {{master | password}}</pre>
 </div>

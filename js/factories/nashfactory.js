@@ -1,4 +1,3 @@
-
 myApp.factory('nash', ['$http','API_URL', function ($http, API_URL) {
   function getAll(cb) {
     $http

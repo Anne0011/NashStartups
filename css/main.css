@@ -1,9 +1,9 @@
 /*Main navigation bar styling*/
-.navbar.main {
+#navbar{
   margin-bottom: 0px;
   padding-bottom: 0px;
-  text-align: left;
-  background-color: #F8F8F8;
+  background-color: #F8F8F8
+  color:#00008B
 }
 
 

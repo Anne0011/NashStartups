@@ -1,23 +1,28 @@
-var myApp = angular.module('nash', ['ngRoute']);
+var myApp = angular.module('nash',['ngRoute', 'ui.bootstrap']);
+
 myApp.config(function ($routeProvider) {
   $routeProvider.
     when('/', {
       templateUrl: 'partials/home.html',
       controller: 'HomeCtrl'
-    }).
-    when('/investors', {
+    })
+    .when('/investors', {
       templateUrl: 'partials/investors.html',
       controller: 'investorsCtrl'
-    }).
-    when('/events', {
+    })
+    .when('/events', {
       templateUrl: 'partials/events.html',
       controller: 'eventsCtrl'
-    }).
-    when('/startups', {
+    })
+    .when('/startups', {
       templateUrl: 'partials/startups.html',
       controller: 'startupsCtrl'
-      }).
-    otherwise("/");
+      })
+    .when('/register', {
+      templateUrl: 'partials/register.html',
+      controller: 'AuthCtrl'
+      })
+    .otherwise("/");
 });
 
 

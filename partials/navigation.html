@@ -1,0 +1,41 @@
+<div class="bsNav">
+  <nav role="navigation" class="navbar main navbar-default">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header" id="navbar">
+      <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="#" class="navbar-brand"href="/#/">Nashville Startups List</a>
+    </div>
+      <!-- Collection of nav links and other content for toggling -->
+    <div id="navbarCollapse" class="collapse navbar-collapse" id="navbar">
+      <ul class="nav navbar-nav" id="nav">
+        <li><a href="/#/startups"><i class="fa fa-leaf"></i></span> Startups</a></li>
+        <li><a href="/#/investors"><span class="glyphicon glyphicon-knight"> Investors</a></li>
+        <li><a href="/#/events"><i class="fa fa-calendar"></i></i> Events</a></li>
+      </ul>
+      <form class="navbar-form navbar-right" role="search" ng-show="!isUserLoggedIn">
+        <div class="form-group">
+          <button class="btn btn-default" ng-click="open()">TEST</button>
+          <input type="text" class="form-control" placeholder="User Email">
+          <input type="text" class="form-control" placeholder="Password">
+        </div>
+      </form>
+        <ul class="nav navbar-nav navbar-right" ng-show="!isUserLoggedIn">
+        <button class="btn btn-link" ng-click="launch()">Register</button>
+      </ul>
+      <ul class="nav navbar-nav navbar-right" ng-show="isUserLoggedIn">
+        <button class="btn btn-link" ng-click="">Log Out</button>
+      </ul>
+    </div>
+
+    <div class="container-repsonsive">
+      <div class="col-sm-12" id="Nashville">
+        <p></p>
+      </div>
+    </div>
+  </nav>
+</div>

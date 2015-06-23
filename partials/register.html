@@ -1,4 +1,5 @@
-<div ng-controller="registerCtrl">
+<div ng-include src="'partials/navigation.html'" ng-controller="NavCtrl"></div>
+<div ng-controller="AuthCtrl">
   <form novalidate class="simple-form">
     <input type="radio" ng-model="user.Investor" value="true" />Investor<br />
     <input type="radio" ng-model="user.Investor" value="false" />Startup Company<br />

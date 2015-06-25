@@ -22,5 +22,11 @@ myApp.factory('nash', ['$http','API_URL', function ($http, API_URL) {
       .delete(`${API_URL}/nash/${id}.json`)
       .success(cb);
   }
-    return {getAll:getAll, create:create, update:update, destroy:destroy};
-  }]);
+
+  return {
+    getAll: getAll,
+    create: create,
+    update: update,
+    destroy: destroy
+  };
+}]);

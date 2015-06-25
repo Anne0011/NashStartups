@@ -1,4 +1,4 @@
-var myApp = angular.module('nash',['ngRoute', 'ui.bootstrap', 'firebase']);
+var myApp = angular.module('nash', ['ngRoute', 'ui.bootstrap', 'firebase']);
 
 myApp.config(function ($routeProvider) {
   $routeProvider.
@@ -22,8 +22,7 @@ myApp.config(function ($routeProvider) {
       templateUrl: 'partials/register.html',
       controller: 'AuthCtrl'
       })
-    .otherwise("/");
+    .otherwise('/');
 });
-
 
 myApp.constant('API_URL', 'https://nashstartuplist.firebaseio.com/');

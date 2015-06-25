@@ -12,20 +12,13 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>Technology</td>
-                    <td>ABC 123 Company</td>
-                    <td>John New</td>
-                    <td>615-555-1234</td>
-                    <td>johnNew@mail.com</td>
-                </tr>
-                <tr>
-                    <td>Health Care</td>
-                    <td>New You</td>
-                    <td>Annie Healthy</td>
-                    <td>615-999-1111</td>
-                    <td>ahealthy@mail.com</td>
-                </tr>
+              <tr ng-repeat="startup in startups">
+                <td>{{startup.industry}}</td>
+                <td>{{startup.name}}</td>
+                <td>{{startup.contact}}</td>
+                <td>{{startup.phone_number}}</td>
+                <td>{{startup.email}}</td>
+              </tr>
             </tbody>
         </table>
     </div>

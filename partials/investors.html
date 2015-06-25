@@ -12,30 +12,13 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>Technology</td>
-                <td>Give U Money</td>
-                <td>T Dollar</td>
-                <td>615-444-4444</td>
-                <td>tdollar@mail.com</td>
-            </tr>
-            <tr>
-                <td>Health Care</td>
-                <td>ElderCare Res</td>
-                <td>Jack Healthy</td>
-                <td>615-777-2222</td>
-                <td>eldercare@mail.com</td>
+            <tr ng-repeat="firm in firms">
+              <td>{{firm.industry}}</td>
+              <td>{{firm.name}}</td>
+              <td>{{firm.contact}}</td>
+              <td>{{firm.phone_number}}</td>
+              <td>{{firm.email}}</td>
             </tr>
         </tbody>
     </table>
 </div>
-  <!-- <li ng-repeat="item in list | filter:name">{{ item | json }}</li>
-The $firebaseArray service can also take a query to only sync a subset of data.
-app.controller("MyCtrl", ["$scope", "$firebaseArray",
-  function($scope, $firebaseArray) {
-    var messagesRef = new Firebase(URL).child("messages");
-    var query = messagesRef.orderBy("timestamp").limitToLast(10);
-
-    var list = $firebaseArray(query); -->
-  <!-- }
-]; -->

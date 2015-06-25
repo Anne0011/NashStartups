@@ -1,4 +1,8 @@
-myApp.controller('AuthCtrl', ['$scope', '$location', 'Auth', function($scope, $location, Auth){
+myApp.controller('AuthCtrl', ['$scope', '$location', 'Auth', '$firebaseArray',
+function($scope, $location, Auth, $firebaseArray){
+    $scope.user={}
+    var userref = new Firebase("https://nashstartuplist.firebaseio.com/users")
+    $scope.users = $firebaseArray(userref)
     $scope.login = function() {
       Auth.login($scope.user.email, $scope.user.password, function() {
         $location.path('/todo');
@@ -7,12 +11,13 @@ myApp.controller('AuthCtrl', ['$scope', '$location', 'Auth', function($scope, $l
     };
 
     $scope.register = function() {
-      Auth.register($scope.user.email, $scope.user.password, function() {
-        Auth.login($scope.user.email, $scope.user.password, function() {
-          $location.path('/register');
-          $scope.$apply();
-        });
-      });
+      $scope.users.$add($scope.user)
+      // Auth.register($scope.user.email, $scope.user.password, function() {
+      //   Auth.login($scope.user.email, $scope.user.password, function() {
+      //     $location.path('/register');
+      //     $scope.$apply();
+      //   });
+      // });
     };
 
     $scope.logout=function(){

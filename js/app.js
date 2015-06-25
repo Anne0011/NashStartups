@@ -1,4 +1,4 @@
-var myApp = angular.module('nash',['ngRoute', 'ui.bootstrap']);
+var myApp = angular.module('nash',['ngRoute', 'ui.bootstrap', 'firebase']);
 
 myApp.config(function ($routeProvider) {
   $routeProvider.

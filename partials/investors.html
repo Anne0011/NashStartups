@@ -29,3 +29,13 @@
         </tbody>
     </table>
 </div>
+  <!-- <li ng-repeat="item in list | filter:name">{{ item | json }}</li>
+The $firebaseArray service can also take a query to only sync a subset of data.
+app.controller("MyCtrl", ["$scope", "$firebaseArray",
+  function($scope, $firebaseArray) {
+    var messagesRef = new Firebase(URL).child("messages");
+    var query = messagesRef.orderBy("timestamp").limitToLast(10);
+
+    var list = $firebaseArray(query); -->
+  <!-- }
+]; -->

@@ -9,6 +9,8 @@ myApp.controller(
       {
         $location.path('/register')
       }
+      // $scope.submit = function()
+      //   $location.path('')
     // $scope.open = function (){
     //   var modalInstance = $modal.open({
     //     animation: true,

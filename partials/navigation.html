@@ -19,16 +19,17 @@
       </ul>
       <form class="navbar-form navbar-right" role="search" ng-show="!isUserLoggedIn">
         <div class="form-group">
-          <button class="btn btn-default" ng-click="open()">TEST</button>
+          <!-- <button class="btn btn-default" ng-click="open()">TEST</button> -->
           <input type="text" class="form-control" placeholder="User Email">
           <input type="text" class="form-control" placeholder="Password">
+          <button class="btn btn-primary" ng-click="submit()">Submit</button>
         </div>
       </form>
         <ul class="nav navbar-nav navbar-right" ng-show="!isUserLoggedIn">
         <button class="btn btn-link" ng-click="launch()">Register</button>
       </ul>
       <ul class="nav navbar-nav navbar-right" ng-show="isUserLoggedIn">
-        <button class="btn btn-link" ng-click="">Log Out</button>
+        <button class="btn btn-link" ng-click="luanch()">Log Out</button>
       </ul>
     </div>
 

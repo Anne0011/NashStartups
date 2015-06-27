@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
 
-    <title>NashStartupsList</title>
+    <title>Nash Startups List</title>
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
@@ -12,9 +12,12 @@
     <link rel="stylesheet" href='/css/main.css'>
     <link href='//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/ico" href="images/pj.png"/>
 </head>
 
 <body ng-app='nash'>
+  <div ng-include src="'partials/navigation.html'" ng-controller="AuthCtrl"></div>
+
   <div ng-view></div>
 
   <script src="/bower_components/angular/angular.js"></script>
@@ -31,7 +34,7 @@
   <script src="/js/controllers/authController.js"></script>
   <script src="/js/controllers/investorsCtrl.js"></script>
   <script src="/js/controllers/startupsCtrl.js"></script>
-
+  <script src="/js/controllers/profileCtrl.js"></script>
 </body>
 
 </html>

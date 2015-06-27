@@ -12,11 +12,14 @@ myApp.controller('AuthCtrl', ['$scope', '$location', 'Auth', '$firebaseArray', f
         $scope.$apply();
       });
     };
-
+    $scope.registerpg = function(){
+      console.log("time to register");
+      $location.path('/register')
+    };
     $scope.register = function() {
       Auth.register($scope.user.email, $scope.user.password, function() {
         Auth.login($scope.user.email, $scope.user.password, function() {
-          $location.path('/');
+          $location.path('/profile');
 
           $scope.$apply();
         });

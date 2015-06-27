@@ -5,6 +5,7 @@
   background-color: #F8F8F8;
   color:#00008B;
 }
+
 #info{
   Height: 300px;
 }
@@ -30,6 +31,7 @@
 }*/
 html, body {font-style: font-family: FontAwesome;
   height: 100%;
+  background-color: #E6E6E6;
 }
 .wrapper {
   min-height: 100%;
@@ -41,17 +43,48 @@ html, body {font-style: font-family: FontAwesome;
   height: 4em;
 }
 
-.divborder{
+.divborder{font-size: 17px;
   background-color: #A5CDEF;
-    border: 4px solid white;
+    border: 4px solid #E6E6E6;
     opacity: .85;
     border-radius: 25px;
     padding: 20px;
-    height: 300px;
+    height: 350px;
 }
 
 .form-group{
   text-align: left;
   font-style: normal;
   font-family: sans-serif;
+}
+
+.getInv{
+  border-radius: 25px;
+  height: auto;
+  background-color: #A5CDEF;
+  opacity: .85;
+  margin-top: 30px;
+  margin-left: 0px;
+  margin-right: 0px;
+  padding: 10px;
+}
+ul{
+list-style-type: none;
+}
+#Con, #Dr, #En{
+  text-align:justify;
+  text-shadow: v-shadow;
+}
+#spon1{
+  text-align: left;
+}
+#GI, #p2, #list-style-type{
+  text-align: center;
+}
+#regpg{
+  background-color: #A5CDEF;
+}
+
+#reg{
+  text-align: center;
 }

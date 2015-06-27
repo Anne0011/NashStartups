@@ -1,9 +1,13 @@
 
-<div ng-include src="'partials/navigation.html'" ng-controller="NavCtrl"></div><form class="form-horizontal">
+<!-- <div ng-include src="'partials/navigation.html'" ng-controller="NavCtrl"></div><form class="form-horizontal"> -->
   <div class="form-group">
+    <input type="radio" ng-model="user.Investor" value="true" />Investor<br /><br>\
+
+    <input type="radio" ng-model="user.Investor" value="false" />Startup Company<br/><br>
+
     <label for="Industry" class="col-sm-2 control-label">Industry Type</label>
     <div class="col-sm-10">
-      <input type="text" class="form-control" id="Itype" placeholder="Itype">
+      <input type="text" class="form-control" id="Itype" placeholder="Industry">
     </div>
   <div class="form-group">
     <label for="investors" class="col-sm-2 control-label">Company Name</label>
@@ -31,10 +35,8 @@
   </div>
   <div class="form-group">
     <div class="col-sm-offset-2 col-sm-10">
-      <button type="button" ng-click class="btn btn-success">Submit</button>
-      <button type="button" class="btn btn-success">Edit</button>
-      </div>
+      <button type="button" ng-click='submit()' class="btn btn-success">Submit</button>
     </div>
   </div>
-  <textarea class="form-control" rows="4"></textarea>
+</div>
 </form>

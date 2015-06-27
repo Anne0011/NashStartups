@@ -22,6 +22,10 @@ myApp.config(function ($routeProvider) {
       templateUrl: 'partials/register.html',
       controller: 'AuthCtrl'
       })
+      .when('/profile', {
+        templateUrl: 'partials/Profile.html',
+        controller: 'AuthCtrl'
+        })
     .otherwise('/');
 });
 

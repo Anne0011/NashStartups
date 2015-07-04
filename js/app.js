@@ -17,15 +17,15 @@ myApp.config(function ($routeProvider) {
     .when('/startups', {
       templateUrl: 'partials/startups.html',
       controller: 'startupsCtrl'
-      })
+    })
     .when('/register', {
       templateUrl: 'partials/register.html',
       controller: 'AuthCtrl'
-      })
-      .when('/profile', {
-        templateUrl: 'partials/Profile.html',
-        controller: 'AuthCtrl'
-        })
+    })
+    .when('/profile', {
+      templateUrl: 'partials/Profile.html',
+      controller: 'profileCtrl'
+    })
     .otherwise('/');
 });
 

@@ -12,10 +12,12 @@ myApp.controller('AuthCtrl', ['$scope', '$location', 'Auth', '$firebaseArray', f
         $scope.$apply();
       });
     };
-    $scope.registerpg = function(){
+
+    $scope.registerpg = function() {
       console.log("time to register");
       $location.path('/register')
     };
+
     $scope.register = function() {
       Auth.register($scope.user.email, $scope.user.password, function() {
         Auth.login($scope.user.email, $scope.user.password, function() {
@@ -26,10 +28,10 @@ myApp.controller('AuthCtrl', ['$scope', '$location', 'Auth', '$firebaseArray', f
       });
     };
 
-    $scope.logout=function(){
+    $scope.logout=function() {
       Auth.logout(function() {
         $location.path('/login');
         $scope.$apply();
       });
     };
-  }]);
+}]);

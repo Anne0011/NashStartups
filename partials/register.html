@@ -2,10 +2,8 @@
 
 <div ng-controller="AuthCtrl">
   <form novalidate class="form-group" id="reg">
-      E-mail: <input type="email"ng-model="user.email" /><br /><br />
-
-      Password: <input type="password" ng-model="user.password" /><br /><br />
-
-      <input class="btn btn-primary"type="register" ng-click="register()" value="Register" />
+      E-mail: <input type="email"ng-model="user.email" />
+      Password: <input type="password" ng-model="user.password" />
+      <button class="btn btn-primary"type="register" ng-click="register()">Register</button>
   </form>
 </div>

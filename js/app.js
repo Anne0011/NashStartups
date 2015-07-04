@@ -8,23 +8,23 @@ myApp.config(function ($routeProvider) {
     })
     .when('/investors', {
       templateUrl: 'partials/investors.html',
-      controller: 'investorsCtrl'
-    })
-    .when('/events', {
-      templateUrl: 'partials/events.html',
-      controller: 'eventsCtrl'
+      controller: 'InvestorsCtrl'
     })
     .when('/startups', {
       templateUrl: 'partials/startups.html',
-      controller: 'startupsCtrl'
+      controller: 'StartupsCtrl'
+    })
+    .when('/login', {
+      templateUrl: 'partials/login.html',
+      controller: 'AuthCtrl'
     })
     .when('/register', {
       templateUrl: 'partials/register.html',
       controller: 'AuthCtrl'
     })
     .when('/profile', {
-      templateUrl: 'partials/Profile.html',
-      controller: 'profileCtrl'
+      templateUrl: 'partials/profile.html',
+      controller: 'ProfileCtrl'
     })
     .otherwise('/');
 });

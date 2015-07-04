@@ -1,24 +1,24 @@
-<!-- <div ng-include src="'partials/navigation.html'" ng-controller="NavCtrl"></div> -->
-<h2>Investors Page</h2>
+<h1>Investors Page</h1>
+
 <div class="bs-startup">
-    <table class="table table-condensed table-hoover">
-        <thead>
-            <tr>
-                <th>Business Industry</th>
-                <th>Company Name</th>
-                <th>Contact Name</th>
-                <th>Phone Number</th>
-                <th>Email</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr ng-repeat="firm in firms">
-              <td>{{firm.industry}}</td>
-              <td>{{firm.name}}</td>
-              <td>{{firm.contact}}</td>
-              <td>{{firm.phone_number}}</td>
-              <td>{{firm.email}}</td>
-            </tr>
-        </tbody>
-    </table>
+  <table class="table table-condensed">
+    <thead>
+      <tr>
+        <th>Business Industry</th>
+        <th>Company Name</th>
+        <th>Contact Name</th>
+        <th>Phone Number</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="firm in firms">
+        <td>{{firm.industry}}</td>
+        <td>{{firm.name}}</td>
+        <td>{{firm.contact}}</td>
+        <td>{{firm.phone_number}}</td>
+        <td>{{firm.email}}</td>
+      </tr>
+    </tbody>
+  </table>
 </div>

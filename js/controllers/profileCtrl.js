@@ -1,12 +1,8 @@
-myApp.controller('profileCtrl', ['$scope', '$location', 'nash', '$firebaseArray', function($scope, $location, nash, $firebaseArray) {
+myApp.controller('ProfileCtrl', ['$scope', '$location', '$firebaseArray', function($scope, $location, $firebaseArray) {
 
-  Profiles = $firebaseArray(new Firebase("https://nashstartuplist.firebaseio.com/profiles"));
+  Profiles = $firebaseArray(new Firebase("https://nashstartuplist.firebaseio.com/user-profiles"));
 
-  $scope.submit = function () {
-    var save = Profiles.$add({
-      companyName: $scope.company_name
-    });
+  $scope.editProfile = function() {
 
-    $location.path('/')
   };
 }]);

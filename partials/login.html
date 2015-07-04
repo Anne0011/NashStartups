@@ -1,0 +1,14 @@
+<!-- <div ng-include src="'partials/navigation.html'" ng-controller="NavCtrl"></div> -->
+
+<div ng-controller="AuthCtrl">
+  <form novalidate class="form-group" id="reg">
+      E-mail: <input type="email"ng-model="user.email" />
+      Password: <input type="password" ng-model="user.password" />
+      <button class="btn btn-primary" type="login" ng-click="login()">Login</button>
+  </form>
+
+  <button class="btn btn-primary" ng-click="loginWithGithub()">Github</button>
+  <button class="btn btn-primary" ng-click="loginWithTwitter()">Twitter</button>
+  <button class="btn btn-primary" ng-click="loginWithGoogle()">Google +</button>
+  <button class="btn btn-primary" ng-click="loginWithFacebook()">Facebook</button>
+</div>

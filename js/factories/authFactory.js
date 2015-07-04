@@ -23,7 +23,7 @@ myApp.factory('Auth', ['$rootScope', '$location', 'API_URL', function($rootScope
       password: password
     }, function(err, authData) {
       if(err) {
-        console.log(err)
+        console.log(err);
       }
       else {
         $rootScope.auth = authData;
@@ -32,7 +32,7 @@ myApp.factory('Auth', ['$rootScope', '$location', 'API_URL', function($rootScope
 
         fn();
       }
-    })
+    });
   }
 
   function logout(fn) {
@@ -40,7 +40,7 @@ myApp.factory('Auth', ['$rootScope', '$location', 'API_URL', function($rootScope
       $rootScope.auth = null;
 
       fn();
-    })
+    });
   }
 
   function getAuth() {

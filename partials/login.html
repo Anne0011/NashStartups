@@ -1,14 +1,35 @@
-<!-- <div ng-include src="'partials/navigation.html'" ng-controller="NavCtrl"></div> -->
-
 <div ng-controller="AuthCtrl">
-  <form novalidate class="form-group" id="reg">
-      E-mail: <input type="email"ng-model="user.email" />
-      Password: <input type="password" ng-model="user.password" />
-      <button class="btn btn-primary" type="login" ng-click="login()">Login</button>
-  </form>
-
-  <button class="btn btn-primary" ng-click="loginWithGithub()">Github</button>
-  <button class="btn btn-primary" ng-click="loginWithTwitter()">Twitter</button>
-  <button class="btn btn-primary" ng-click="loginWithGoogle()">Google +</button>
-  <button class="btn btn-primary" ng-click="loginWithFacebook()">Facebook</button>
+  <div class='row' id='lrow'>
+    <div class="col-lg-2"></div>
+    <div class="col-lg-6 Ldivborder">
+      <h1 id="nashlogin"><img src="images/guitar4.ico" height="62" width="62">Nash Startups Login</h1>
+      <br>
+      <div class="registerPage">
+        <form class="form-horizontal">
+        <form novalidate class="form-group" id="reg">
+          E-mail:
+          <div class="form-group">
+            <div class="col-xs-6" id="lemail1">
+              <input type="email"ng-model="user.email" /></div>
+          </div>
+          <br>
+          Password:
+          <div class="form-group">
+            <div class="col-xs-6" id="lpass1">
+              <input type="password" ng-model="user.password" /></div>
+          <button class="btn btn-primary btn-lrg" type="login" ng-click="login()">Login</button>
+          </form>
+          </div>
+          <br>
+          <footer class="clear-fixed">
+            <form id="Licons">
+              <button class="btn btn-primary" id="login-github" ng-click="loginWithGithub()"><i class="fa fa-github-square fa-3x"></i>Github</button>
+              <button class="btn btn-primary" id="login-twitter" ng-click="loginWithTwitter()"><i class="fa fa-twitter fa-3x"></i>Twitter</button>
+              <button class="btn btn-primary" id="login-google+" ng-click="loginWithGoogle()"><i class="fa fa-google-plus-square fa-3x"></i>Google +</button>
+              <button class="btn btn-primary" id="login-facebook" ng-click="loginWithFacebook()"><i class="fa fa-facebook fa-3x"></i>Facebook</button>
+            </form>
+          </footer>
+      </div>
+    </div>
+  </div>
 </div>

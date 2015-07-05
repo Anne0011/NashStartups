@@ -1,5 +1,5 @@
-var myApp = angular.module('nash', ['ngRoute', 'ui.bootstrap', 'firebase']);
 
+var myApp = angular.module('nash', ['ngRoute', 'ui.bootstrap','mwl.calendar', 'firebase']);
 myApp.config(function ($routeProvider) {
   $routeProvider.
     when('/', {
@@ -25,6 +25,10 @@ myApp.config(function ($routeProvider) {
     .when('/profile', {
       templateUrl: 'partials/profile.html',
       controller: 'ProfileCtrl'
+    })
+    .when('/events', {
+      templateUrl: 'partials/events.html',
+      controller: 'events'
     })
     .otherwise('/');
 });

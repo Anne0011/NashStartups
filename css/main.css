@@ -29,7 +29,7 @@
   margin: 0;
   padding: 0;
 }*/
-html, body {font-style: font-family: FontAwesome;
+html, body {font-family: FontAwesome;
   height: 100%;
   background-color: #E6E6E6;
 }
@@ -39,20 +39,48 @@ html, body {font-style: font-family: FontAwesome;
   height: 100%;
   margin: 0 auto -4em;
 }
-.footer, .push {text-align: center;
-  height: 4em;
+#copywr{
+  text-align: center;
+}
+.footer {
+  position: relative;
+  margin-top: -150px; /* negative value of footer height */
+  height: 150px;
+  clear:both;
+  padding-top:20px;
 }
 
-.divborder{font-size: 17px;
+.divborder{
+  font-size: 17px;
   background-color: #A5CDEF;
-    border: 4px solid #E6E6E6;
-    opacity: .85;
-    border-radius: 25px;
-    padding: 20px;
-    height: 350px;
+  border: 4px solid #E6E6E6;
+  opacity: .85;
+  border-radius: 25px;
+  padding: 10px;
+  height: 350px;
+}
+#regis, #lrow{
+  background-color: #A5CDEF;
+}
+
+#nashs{
+  margin-left: 85px;
+}
+.Rdivborder, .Ldivborder{font-size: 17px;
+  align-content: stretch|center|space-between;
+  background-color: #F8F8F8;
+  margin: 100px;
+  border: 4px solid #E6E6E6;
+  opacity: .85;
+  border-radius: 25px;
+  padding: 0px;
+  height: 380px;
 }
 
 .form-group{
+  align-content: stretch|center|space-between|space-between;
+  font-size: 16px;
+  color: #A9A9A9;
   text-align: left;
   font-style: normal;
   font-family: sans-serif;
@@ -87,4 +115,81 @@ list-style-type: none;
 
 #reg{
   text-align: center;
+}
+#remail, #rpass{
+  margin-top: 20px;
+}
+.form-horizontal{
+  margin-left: 150px;
+}
+#regbtn, #Licons{
+  margin-bottom: 40px;
+}
+#Licons{
+  margin-left: 150px;
+}
+#nashlogin{
+  margin-left: 85px;
+}
+#lpass1{
+  margin-right: 0px;
+  }
+#investpage, #startpg{
+  background-color: #A5CDEF;
+}
+/*calender customization*/
+simple-calendar {
+  * {
+    user-select: none;
+  }
+
+  .calendar{
+    padding: 0;
+    border: 1px solid #dddddd;
+    background-color: #fff;
+  }
+
+  .move-month { cursor: pointer; }
+  .prev-month { float: left; }
+  .next-month { float: right; }
+
+  .current-month {
+    width: 100%;
+    text-align: center;
+    padding: 20px 8px;
+  }
+
+  .week {
+    height: 30px;
+
+    .day:last-child {
+      border-right: none;
+    }
+  }
+
+  .weekday { text-align: center; }
+
+  .weekday, .day {
+    display: inline-block;
+    width: calc(100% / 7);
+  }
+
+  .day {
+    height: 30px;
+    padding: 2px;
+    border: 1px solid #dddddd;
+    border-bottom: none;
+    border-left: none;
+    overflow: hidden;
+
+    &:hover { cursor: pointer; }
+    &.default { background-color: lightblue; }
+    &.event { background-color: #fdf3ea; }
+
+    &.disabled {
+      cursor: default;
+      color: silver;
+      background-color: white;
+    }
+  }
 }

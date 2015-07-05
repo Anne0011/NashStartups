@@ -9,10 +9,11 @@
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+    <link href="/bower_components/angular-bootstrap-calendar/dist/css/angular-bootstrap-calendar.min.css" rel="stylesheet">
     <link rel="stylesheet" href='/css/main.css'>
     <link href='//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-    <link rel="icon" type="image/ico" href="images/pj.png"/>
+    <link rel="icon" type="image/ico" href="images/guitar3.ico"/>
 </head>
 
 <body ng-app='nash'>
@@ -22,6 +23,7 @@
 
   <script src="/bower_components/angular/angular.js"></script>
   <script src="/bower_components/angular-route/angular-route.js"></script>
+  <script src="/bower_components/angular-bootstrap-calendar/dist/js/angular-bootstrap-calendar-tpls.min.js"></script>
   <script src="/bower_components/firebase/firebase.js"></script>
   <script src="//cdn.firebase.com/libs/angularfire/1.1.1/angularfire.min.js"></script>
   <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.13.0.js"></script>
@@ -31,8 +33,14 @@
   <script src="/js/controllers/homeController.js"></script>
   <script src="/js/controllers/authController.js"></script>
   <script src="/js/controllers/investorsCtrl.js"></script>
+  <script src="/js/controllers/eventsCtrl.js"></script>
   <script src="/js/controllers/startupsCtrl.js"></script>
   <script src="/js/controllers/profileCtrl.js"></script>
+<div id="wrap">
+  <div id="main" class="container clear-top">
+    <p id="copywr"><i class="fa fa-copyright"></i>2015 Anne Grose</p>
+  </div>
+</div>
+<footer class="footer"></footer>
 </body>
-
 </html>

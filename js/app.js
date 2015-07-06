@@ -16,11 +16,11 @@ myApp.config(function ($routeProvider) {
     })
     .when('/login', {
       templateUrl: 'partials/login.html',
-      controller: 'AuthCtrl'
+      controller: 'UserCtrl'
     })
     .when('/register', {
       templateUrl: 'partials/register.html',
-      controller: 'AuthCtrl'
+      controller: 'UserCtrl'
     })
     .when('/profile', {
       templateUrl: 'partials/profile.html',

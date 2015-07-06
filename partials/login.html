@@ -1,4 +1,4 @@
-<div ng-controller="AuthCtrl">
+<div ng-controller="UserCtrl">
   <div class='row' id='lrow'>
     <div class="col-lg-2"></div>
     <div class="col-lg-6 Ldivborder">
@@ -17,16 +17,16 @@
           <div class="form-group">
             <div class="col-xs-6" id="lpass1">
               <input type="password" ng-model="user.password" /></div>
-          <button class="btn btn-primary btn-lrg" type="login" ng-click="login()">Login</button>
+          <button class="btn btn-primary btn-lrg" type="login" ng-click="login('simple')">Login</button>
           </form>
           </div>
           <br>
           <footer class="clear-fixed">
             <form id="Licons">
-              <button class="btn btn-primary" id="login-github" ng-click="loginWithGithub()"><i class="fa fa-github-square fa-3x"></i>Github</button>
-              <button class="btn btn-primary" id="login-twitter" ng-click="loginWithTwitter()"><i class="fa fa-twitter fa-3x"></i>Twitter</button>
-              <button class="btn btn-primary" id="login-google+" ng-click="loginWithGoogle()"><i class="fa fa-google-plus-square fa-3x"></i>Google +</button>
-              <button class="btn btn-primary" id="login-facebook" ng-click="loginWithFacebook()"><i class="fa fa-facebook fa-3x"></i>Facebook</button>
+              <button class="btn btn-primary" id="login-github" ng-click="login('github')"><i class="fa fa-github-square fa-3x"></i>Github</button>
+              <button class="btn btn-primary" id="login-twitter" ng-click="login('twitter')"><i class="fa fa-twitter fa-3x"></i>Twitter</button>
+              <button class="btn btn-primary" id="login-google+" ng-click="login('google')"><i class="fa fa-google-plus-square fa-3x"></i>Google +</button>
+              <button class="btn btn-primary" id="login-facebook" ng-click="login('facebook')"><i class="fa fa-facebook fa-3x"></i>Facebook</button>
             </form>
           </footer>
       </div>

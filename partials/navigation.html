@@ -14,11 +14,10 @@
     <ul class="nav navbar-nav" id="nav">
       <li><a href="/#/startups"><i class="fa fa-leaf"></i> Startups</a></li>
       <li><a href="/#/investors"><i class="glyphicon glyphicon-knight"></i> Investors</a></li>
-      <li><a href="/#/events"><i class="fa fa-calendar"></i> Events</a></li>
     </ul>
 
-    <a type="button" class="btn btn-success navbar-btn pull-right" ng-show="!isUserLoggedIn" href="/#/login" style="margin-right: 5px;">Sign in</a>
-    <a type="button" class="btn btn-default navbar-btn pull-right" ng-show="!isUserLoggedIn" href="/#/register" style="margin-right: 5px;">Register</a>
-    <a type="button" class="btn btn-danger navbar-btn pull-right" ng-show="isUserLoggedIn" ng-click="logout()" style="margin-right: 5px;">Log Out</a>
+    <a type="button" class="btn btn-success navbar-btn pull-right" ng-show="!isUserLoggedIn()" href="/#/login" style="margin-right: 5px;">Sign in</a>
+    <a type="button" class="btn btn-default navbar-btn pull-right" ng-show="!isUserLoggedIn()" href="/#/register" style="margin-right: 5px;">Register</a>
+    <a type="button" class="btn btn-danger navbar-btn pull-right" ng-show="isUserLoggedIn()" ng-click="logout()" style="margin-right: 5px;">Log Out</a>
   </nav>
 </div>

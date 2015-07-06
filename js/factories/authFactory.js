@@ -1,42 +1,57 @@
-myApp.factory('Auth', ['$rootScope', '$location', 'API_URL', function($rootScope, $location, API_URL) {
+myApp.factory('Auth', ['$rootScope', '$location', '$firebaseAuth', 'API_URL', function($rootScope, $location, $firebaseAuth, API_URL) {
   var fb = new Firebase(API_URL);
+  var fbAuth = $firebaseAuth(fb);
 
-  function login(email, password, fn) {
-    fb.authWithPassword({
-      email: email,
-      password: password
-    }, function(err, authData) {
-      if(err) {
-        console.log(err);
-      }
-      else {
+  function socialLogin(type, fn) {
+    if (_.contains(['facebook', 'google', 'github', 'twitter'], type)) {
+      console.log(type);
+
+      fbAuth.$authWithOAuthPopup(type)
+      .then(function(authData){
         $rootScope.auth = authData;
 
         fn();
-      }
+      })
+      .catch(function(err) {
+        console.log(err);
+      });
+    } else {
+      console.log('Tried to login with a social service that isn\'nt integrated! Tried: ' + type);
+    }
+  }
+
+  function simpleLogin(email, password, fn) {
+    fbAuth.$authWithPassword({
+      email: email,
+      password: password
+    })
+    .then(function(authData) {
+      $rootScope.auth = authData;
+
+      fn();
+    })
+    .catch(function(err) {
+      console.log(err);
     });
   }
 
   function register(email, password, fn) {
-    fb.createUser({
+    fbAuth.$createUser({
       email: email,
       password: password
-    }, function(err, authData) {
-      if(err) {
-        console.log(err);
-      }
-      else {
-        $rootScope.auth = authData;
+    })
+    .then(function(authData) {
+      $rootScope.auth = authData;
 
-        console.log(authData);
-
-        fn();
-      }
+      fn();
+    })
+    .catch(function(err) {
+      console.log(err);
     });
   }
 
   function logout(fn) {
-    fb.unauth(function() {
+    fbAuth.$unauth(function() {
       $rootScope.auth = null;
 
       fn();
@@ -44,14 +59,19 @@ myApp.factory('Auth', ['$rootScope', '$location', 'API_URL', function($rootScope
   }
 
   function getAuth() {
-    return fb.getAuth();
+    if ($rootScope.auth === null || typeof $rootScope.auth === 'undefined') {
+      return fbAuth.$getAuth();
+    }
+
+    return $rootScope.auth;
   }
 
   return {
-    login:login,
-    register:register,
-    logout:logout,
-    getAuth:getAuth
+    simpleLogin: simpleLogin,
+    socialLogin: socialLogin,
+    register: register,
+    logout: logout,
+    getAuth: getAuth
   };
 
 }]);

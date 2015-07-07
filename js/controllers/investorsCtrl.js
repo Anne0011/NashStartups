@@ -1,21 +1,27 @@
-myApp.controller('InvestorsCtrl', ['$scope', '$location', '$firebaseArray', function($scope, $location, $firebaseArray) {
+myApp.controller('InvestorsCtrl', ['$scope', '$routeParams', '$location', '$firebaseArray', function($scope, $routeParams, $location, $firebaseArray) {
 
-  Firms = $firebaseArray(new Firebase("https://nashstartuplist.firebaseio.com/investor_firms"));
+  $scope.firms = Firms = $firebaseArray(new Firebase("https://nashstartuplist.firebaseio.com/investors"));
+
+  Firms.$loaded().then(function(F) {
+    $scope.firm = firm = Firms.$getRecord($routeParams.investor) || {};
+  });
 
   $scope.addNewFirm = function() {
     var save = Firms.$add({
-
+        // industry: $scope.firm.industry,
+        name: $scope.firm.name,
+        contact: $scope.firm.contact,
+        phone_number: $scope.firm.phone_number,
+        email: $scope.firm.email
+    }).then(function() {
+      $location.path('/investors');
     });
-
-    $location.path('/investors');
-  };
-
-  $scope.editFirm = function() {
-
   };
 
   $scope.deleteFirm = function() {
-
+    Firms.$remove(firm).then(function() {
+      $location.path('/investors');
+    });
   };
 
   // $scope.firms = [

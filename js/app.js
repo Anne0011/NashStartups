@@ -1,5 +1,5 @@
 
-var myApp = angular.module('nash', ['ngRoute', 'ui.bootstrap','mwl.calendar', 'firebase']);
+var myApp = angular.module('nash', ['ngRoute', 'ui.bootstrap', "checklist-model", 'firebase']);
 myApp.config(function ($routeProvider) {
   $routeProvider.
     when('/', {
@@ -10,8 +10,24 @@ myApp.config(function ($routeProvider) {
       templateUrl: 'partials/investors.html',
       controller: 'InvestorsCtrl'
     })
+    .when('/investors/add', {
+      templateUrl: 'partials/addInvestor.html',
+      controller: 'InvestorsCtrl'
+    })
+    .when('/investor/:investor', {
+      templateUrl: 'partials/investor.html',
+      controller: 'InvestorsCtrl'
+    })
     .when('/startups', {
       templateUrl: 'partials/startups.html',
+      controller: 'StartupsCtrl'
+    })
+    .when('/startups/add', {
+      templateUrl: 'partials/addStartup.html',
+      controller: 'StartupsCtrl'
+    })
+    .when('/startup/:startup', {
+      templateUrl: 'partials/startup.html',
       controller: 'StartupsCtrl'
     })
     .when('/login', {
@@ -26,11 +42,8 @@ myApp.config(function ($routeProvider) {
       templateUrl: 'partials/profile.html',
       controller: 'ProfileCtrl'
     })
-    .when('/events', {
-      templateUrl: 'partials/events.html',
-      controller: 'events'
-    })
     .otherwise('/');
 });
 
 myApp.constant('API_URL', 'https://nashstartuplist.firebaseio.com/');
+myApp.constant('FIREBASE', new Firebase("https://nashstartuplist.firebaseio.com/"));

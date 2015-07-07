@@ -1,0 +1,77 @@
+<div class="bs-startup">
+  <form class="form-horizontal">
+  <fieldset>
+
+  <!-- Form Name -->
+  <legend>Add New Investor</legend>
+
+  <!-- Multiple Checkboxes (inline) -->
+  <div class="form-group">
+    <label class="col-md-4 control-label" for="investor_industry">Industries</label>
+    <div class="col-md-4">
+      <label class="checkbox-inline" for="investor_industry-0">
+        <input type="checkbox" name="investor_industry-0" id="investor_industry-0" value="Healthcare" checklist-value="healthcare" checklist-model="investor.industry">
+        Healthcare
+      </label>
+      <label class="checkbox-inline" for="investor_industry-1">
+        <input type="checkbox" name="investor_industry-1" id="investor_industry-1" value="Music" checklist-value="music" checklist-model="investor.industry">
+        Music
+      </label>
+      <label class="checkbox-inline" for="investor_industry-2">
+        <input type="checkbox" name="investor_industry-2" id="investor_industry-2" value="eCommerce" checklist-value="ecommerce" checklist-model="investor.industry">
+        eCommerce
+      </label>
+      <label class="checkbox-inline" for="investor_industry-3">
+        <input type="checkbox" name="investor_industry-3" id="investor_industry-3" value="Fintech" checklist-value="fintech" checklist-model="investor.industry">
+        Fintech
+      </label>
+    </div>
+  </div>
+
+  <!-- Text input-->
+  <div class="form-group">
+    <label class="col-md-4 control-label" for="investor_name">Company Name</label>
+    <div class="col-md-5">
+    <input id="investor_name" name="investor_name" type="text" placeholder="Acme Technology, LLC" class="form-control input-md" required="" ng-model="firm.name">
+    <span class="help-block">The full legal name of the investment entity.</span>
+    </div>
+  </div>
+
+  <!-- Text input-->
+  <div class="form-group">
+    <label class="col-md-4 control-label" for="investor_contact">Contact Person</label>
+    <div class="col-md-5">
+    <input id="investor_contact" name="investor_contact" type="text" placeholder="Anne Grose" class="form-control input-md" required="" ng-model="firm.contact">
+    <span class="help-block">A good contact person for the entity.</span>
+    </div>
+  </div>
+
+  <!-- Text input-->
+  <div class="form-group">
+    <label class="col-md-4 control-label" for="investor_phone_no">Contact Phone Number</label>
+    <div class="col-md-5">
+    <input id="investor_phone_no" name="investor_phone_no" type="text" placeholder="(615) 555 - 5555" class="form-control input-md" required="" ng-model="firm.phone_number">
+    <span class="help-block">A good phone number to reach the contact person.</span>
+    </div>
+  </div>
+
+  <!-- Text input-->
+  <div class="form-group">
+    <label class="col-md-4 control-label" for="investor_email">Contact Email</label>
+    <div class="col-md-5">
+    <input id="investor_email" name="investor_email" type="text" placeholder="anne@acmetech.com" class="form-control input-md" required="" ng-model="firm.email">
+    <span class="help-block">A good email to reach the contact person.</span>
+    </div>
+  </div>
+
+  <!-- Button -->
+  <div class="form-group">
+    <label class="col-md-4 control-label" for="submit"></label>
+    <div class="col-md-4">
+      <button id="submit" name="submit" class="btn btn-success" ng-click="addNewFirm()">Submit</button>
+    </div>
+  </div>
+
+  </fieldset>
+  </form>
+</div>

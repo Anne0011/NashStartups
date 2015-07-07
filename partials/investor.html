@@ -9,20 +9,18 @@
         <th>Contact Name</th>
         <th>Phone Number</th>
         <th>Email</th>
-        <th>Profile</th>
       </tr>
     </thead>
     <tbody>
-      <tr ng-repeat="firm in firms">
+      <tr>
         <td>{{firm.industry}}</td>
         <td>{{firm.name}}</td>
         <td>{{firm.contact}}</td>
         <td>{{firm.phone_number}}</td>
         <td>{{firm.email}}</td>
-        <td><a href="/#/investor/{{firm.$id}}">GO!</a></td>
       </tr>
     </tbody>
   </table>
 
-  <a name="submit" class="btn btn-success" href="/#/investors/add">Add new investor!</a>
+  <a name="submit" class="btn btn-danger" ng-click="deleteFirm()">Delete this mother!</a>
 </div>

@@ -58,7 +58,7 @@
 
     <!-- Page Content -->
     <div id="page-content-wrapper">
-      <a id="menu-toggle"><span class="glyphicon glyphicon-menu-hamburger"></span><span class="glyphicon glyphicon-remove"></span></a>
+      <a id="menu-toggle"><span class="glyphicon glyphicon-menu-left"></span><span class="glyphicon glyphicon-menu-right"></span></a>
 
       <div class="container">
         <h1 class="lobsta" style="margin-bottom: 50px;"><a href="/#/"><img src="/images/nashville.png" height="60" width="60" /></a> Nashville Startup List</h1>
@@ -83,8 +83,8 @@
 
   <script>
     var toggled = true,
-      $hamburger = $('.glyphicon-menu-hamburger'),
-      $remove = $('.glyphicon-remove');
+      $open = $('.glyphicon-menu-left'),
+      $close = $('.glyphicon-menu-right');
 
     $(document).ready(function() {
       changeMenuIcon(0);
@@ -105,13 +105,13 @@
       }
 
       if(toggled) {
-        $hamburger.fadeOut(time, function() {
-          $remove.fadeIn(time);
+        $open.fadeOut(time, function() {
+          $close.fadeIn(time);
         });
       }
       else {
-        $remove.fadeOut(time, function() {
-          $hamburger.fadeIn(time);
+        $close.fadeOut(time, function() {
+          $open.fadeIn(time);
         });
       }
     }

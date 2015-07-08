@@ -17,9 +17,10 @@
             <th>Contact Name</th>
             <th>Phone Number</th>
             <th>Email</th>
-            <th>Profile</th>
+            <th></th>
           </tr>
         </thead>
+
         <tbody>
           <tr ng-repeat="startup in startups">
             <td>{{startup.industry}}</td>
@@ -27,12 +28,12 @@
             <td>{{startup.contact}}</td>
             <td>{{startup.phone_number}}</td>
             <td>{{startup.email}}</td>
-            <td><a href="/#/startup/{{startup.$id}}">GO!</a></td>
+            <td><a class="btn btn-default" href="/#/startup/{{startup.$id}}">Profile</a></td>
           </tr>
         </tbody>
       </table>
+
+      <a name="submit" class="btn btn-success" href="/#/startups/add">Add</a>
     </div>
   </div>
-
-  <a name="submit" class="btn btn-success" href="/#/startups/add">Add new startup!</a>
 </div>

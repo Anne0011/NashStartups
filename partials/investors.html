@@ -1,30 +1,39 @@
-<div class="page-header">
-  <h1>Investors <small>located right here in Nashville, USA</small></h1>
-</div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="page-header">
+        <h1>Investors <small>located right here in Nashville, USA</small></h1>
+      </div>
+    </div>
+  </div>
 
-<div class="bs-startup">
-  <table class="table table-striped">
-    <thead>
-      <tr>
-        <th>Business Industry</th>
-        <th>Company Name</th>
-        <th>Contact Name</th>
-        <th>Phone Number</th>
-        <th>Email</th>
-        <th>Profile</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr ng-repeat="firm in firms">
-        <td>{{firm.industry}}</td>
-        <td>{{firm.name}}</td>
-        <td>{{firm.contact}}</td>
-        <td>{{firm.phone_number}}</td>
-        <td>{{firm.email}}</td>
-        <td><a href="/#/investor/{{firm.$id}}">GO!</a></td>
-      </tr>
-    </tbody>
-  </table>
+  <div class="row">
+    <div class="col-md-12">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Business Industry</th>
+            <th>Company Name</th>
+            <th>Contact Name</th>
+            <th>Phone Number</th>
+            <th>Email</th>
+            <th></th>
+          </tr>
+        </thead>
 
-  <a name="submit" class="btn btn-success" href="/#/investors/add">Add new investor!</a>
+        <tbody>
+          <tr ng-repeat="firm in firms">
+            <td>{{firm.industry}}</td>
+            <td>{{firm.name}}</td>
+            <td>{{firm.contact}}</td>
+            <td>{{firm.phone_number}}</td>
+            <td>{{firm.email}}</td>
+            <td><a class="btn btn-default" href="/#/investor/{{firm.$id}}">Profile</a></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <a name="submit" class="btn btn-success" href="/#/investors/add">Add</a>
+    </div>
+  </div>
 </div>

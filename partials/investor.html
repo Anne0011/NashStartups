@@ -1,28 +1,37 @@
-<div class="page-header">
-  <h2>Investors <small>funded right here in Nashville, USA</small></h2>
-</div>
+<div class="container well">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="page-header">
+        <h2>Investors <small>located right here in Nashville, USA</small></h2>
+      </div>
+    </div>
+  </div>
 
-<div class="bs-startup">
-  <table class="table table-striped">
-    <thead>
-      <tr>
-        <th>Business Industry</th>
-        <th>Company Name</th>
-        <th>Contact Name</th>
-        <th>Phone Number</th>
-        <th>Email</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>{{firm.industry}}</td>
-        <td>{{firm.name}}</td>
-        <td>{{firm.contact}}</td>
-        <td>{{firm.phone_number}}</td>
-        <td>{{firm.email}}</td>
-      </tr>
-    </tbody>
-  </table>
+  <div class="row">
+    <div class="col-md-12">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Business Industry</th>
+            <th>Company Name</th>
+            <th>Contact Name</th>
+            <th>Phone Number</th>
+            <th>Email</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>{{firm.industry}}</td>
+            <td>{{firm.name}}</td>
+            <td>{{firm.contact}}</td>
+            <td>{{firm.phone_number}}</td>
+            <td>{{firm.email}}</td>
+          </tr>
+        </tbody>
+      </table>
 
-  <a name="submit" class="btn btn-danger" ng-click="deleteFirm()">Delete</a>
+      <a class="btn btn-danger pull-right" ng-click="deleteFirm()"><span class="glyphicon glyphicon-remove"></span> Delete</a>
+      <a class="btn btn-default pull-left" href="/#/investors"><span class="glyphicon glyphicon-chevron-left"></span> Back</a>
+    </div>
+  </div>
 </div>

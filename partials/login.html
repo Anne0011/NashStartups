@@ -1,34 +1,47 @@
-<div ng-controller="UserCtrl">
-  <div class='row' id='lrow'>
-    <div class="col-lg-2"></div>
-    <div class="col-lg-6 Ldivborder">
-      <h1 id="nashlogin"><img src="images/guitar4.ico" height="62" width="62">Nash Startups Login</h1>
-      <br>
-      <div class="registerPage">
-        <form class="form-horizontal">
-        <form novalidate class="form-group" id="reg">
-          E-mail:
-          <div class="form-group">
-            <div class="col-xs-6" id="lemail1">
-              <input type="email"ng-model="user.email" /></div>
+<div class="container well">
+  <div class='row'>
+    <div class="col-md-12">
+      <form class="form-horizontal">
+        <fieldset>
+
+        <!-- Form Name -->
+        <legend>Login</legend>
+
+        <!-- Text input-->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="email">Email</label>
+          <div class="col-md-5">
+          <input id="email" name="email" type="text" placeholder="anne@foobar.com" class="form-control input-md" required="" ng-model="user.email">
+          <span class="help-block">Your registered email address.</span>
           </div>
-          <br>
-          Password:
-          <div class="form-group">
-            <div class="col-xs-6" id="lpass1">
-              <input type="password" ng-model="user.password" /></div>
-          <button class="btn btn-primary btn-lrg" type="login" ng-click="login('simple')">Login</button>
-          </form>
+        </div>
+
+        <!-- Password input-->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="password">Password</label>
+          <div class="col-md-5">
+            <input id="password" name="password" type="password" placeholder="******************" class="form-control input-md" required="" ng-model="user.password">
+            <span class="help-block">Your account password.</span>
           </div>
-          <br>
-          <footer class="clear-fixed">
-            <form id="Licons">
-              <button class="btn btn-primary" id="login-github" ng-click="login('github')"><i class="fa fa-github-square fa-3x"></i>Github</button>
-              <button class="btn btn-primary" id="login-twitter" ng-click="login('twitter')"><i class="fa fa-twitter fa-3x"></i>Twitter</button>
-              <button class="btn btn-primary" id="login-google+" ng-click="login('google')"><i class="fa fa-google-plus-square fa-3x"></i>Google +</button>
-              <button class="btn btn-primary" id="login-facebook" ng-click="login('facebook')"><i class="fa fa-facebook fa-3x"></i>Facebook</button>
-            </form>
-          </footer>
+        </div>
+
+        <!-- Button -->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="submit"></label>
+          <div class="col-md-4">
+            <button id="submit" name="submit" class="btn btn-success" ng-click="login('simple')">Submit</button>
+            <a class="btn btn-default" ng-click="resetPassword()">Forgot Password</a>
+          </div>
+        </div>
+
+        </fieldset>
+      </form>
+
+      <div align="center" style="margin-top: 15px;">
+        <button class="btn btn-primary" ng-click="login('github')"><i class="fa fa-github-square fa-3x"></i> Github</button>
+        <button class="btn btn-primary" ng-click="login('twitter')"><i class="fa fa-twitter fa-3x"></i> Twitter</button>
+        <button class="btn btn-primary" ng-click="login('google')"><i class="fa fa-google-plus-square fa-3x"></i> Google +</button>
+        <button class="btn btn-primary" ng-click="login('facebook')"><i class="fa fa-facebook fa-3x"></i> Facebook</button>
       </div>
     </div>
   </div>

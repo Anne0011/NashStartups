@@ -24,8 +24,9 @@
     <!-- Sidebar -->
     <div id="sidebar-wrapper">
         <ul class="sidebar-nav">
-            <li class="sidebar-brand">
-              &nbsp;
+            <li class="avatar">
+              <img src="image.png" alt="Full Name">
+              <h3>Full Name</h3>
             </li>
             <li>
                 <a href="/#/investors">Investors</a>
@@ -57,7 +58,7 @@
 
     <!-- Page Content -->
     <div id="page-content-wrapper">
-      <a id="menu-toggle"><span class="glyphicon glyphicon-menu-hamburger"></span></a>
+      <a id="menu-toggle"><span class="glyphicon glyphicon-menu-hamburger"></span><span class="glyphicon glyphicon-remove"></span></a>
 
       <div class="container">
         <h1 class="lobsta" style="margin-bottom: 50px;"><a href="/#/"><img src="/images/nashville.png" height="60" width="60" /></a> Nashville Startup List</h1>
@@ -81,10 +82,39 @@
   <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.13.0.js"></script>
 
   <script>
+    var toggled = true,
+      $hamburger = $('.glyphicon-menu-hamburger'),
+      $remove = $('.glyphicon-remove');
+
+    $(document).ready(function() {
+      changeMenuIcon(0);
+    })
+
     $("#menu-toggle").click(function(e) {
       e.preventDefault();
+
       $("#wrapper").toggleClass("toggled");
+      toggled = !toggled;
+
+      changeMenuIcon()
     });
+
+    function changeMenuIcon(time) {
+      if(typeof time === 'undefined') {
+        time = 250;
+      }
+
+      if(toggled) {
+        $hamburger.fadeOut(time, function() {
+          $remove.fadeIn(time);
+        });
+      }
+      else {
+        $remove.fadeOut(time, function() {
+          $hamburger.fadeIn(time);
+        });
+      }
+    }
   </script>
 
   <script src="/js/app.js"></script>

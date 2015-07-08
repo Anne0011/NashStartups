@@ -1,31 +1,49 @@
-<div ng-controller="UserCtrl">
-  <div class='row' id='regis'>
-    <div class="col-lg-2"></div>
-    <div class="col-lg-6 Rdivborder">
-      <h1 id='nashs'><img src="images/guitar3.ico" height="62" width="62">Nash Startups List</h1>
-      <br>
-      <div class="registerPage">
-        <form class="form-horizontal">
-        Email Address:
+<div class="container well">
+  <div class='row'>
+    <div class="col-md-12">
+      <form class="form-horizontal">
+        <fieldset>
+
+        <!-- Form Name -->
+        <legend>Register</legend>
+
+        <!-- Text input-->
         <div class="form-group">
-          <div class="col-xs-6" id="remail1">
-            <input type="email" class="form-control" ng-model="user.email">
+          <label class="col-md-4 control-label" for="name">Name</label>
+          <div class="col-md-5">
+          <input id="name" name="name" type="text" placeholder="Anne Barbour" class="form-control input-md" required="" ng-model="user.name">
+          <span class="help-block">Your human name.</span>
           </div>
         </div>
-        <br>
-        Password:
+
+        <!-- Text input-->
         <div class="form-group">
-        <div class="col-xs-6" id="rpass1">
-          <input type="password" class="form-control" ng-model="user.password"></div>
+          <label class="col-md-4 control-label" for="email">Email</label>
+          <div class="col-md-5">
+          <input id="email" name="email" type="text" placeholder="anne@foobar.com" class="form-control input-md" required="" ng-model="user.email">
+          <span class="help-block">Your valid email address.</span>
+          </div>
         </div>
-        <br>
-        <footer class="clear-fixed">
-          <button type="button"  id="regbtn"ng-click="register()" class="btn btn-primary btn-lg">
-            <span class="glyphicon glyphicon-star" aria-hidden="true"></span> Register
-          </button>
-        </footer>
-       </form>
-      </div>
+
+        <!-- Password input-->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="password">Password</label>
+          <div class="col-md-5">
+            <input id="password" name="password" type="password" placeholder="***************" class="form-control input-md" required="" ng-model="user.password">
+            <span class="help-block">A unique password.</span>
+          </div>
+        </div>
+
+        <!-- Button -->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="submit"></label>
+          <div class="col-md-4">
+            <button id="submit" name="submit" class="btn btn-success" ng-click="register()">Submit</button>
+          </div>
+        </div>
+
+        </fieldset>
+      </form>
     </div>
   </div>
 </div>

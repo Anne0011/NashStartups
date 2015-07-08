@@ -2,37 +2,62 @@
   <div class="row">
     <div class="col-md-12">
       <div class="page-header">
-        <h2>Startups <small>funded right here in Nashville, USA</small></h2>
+        <h2>Startups <small>right here in Nashville, USA</small></h2>
       </div>
     </div>
   </div>
 
-  <div class="row">
-    <div class="col-md-12">
-      <table class="table table-striped">
-        <thead>
-          <tr>
-            <th>Business Industry</th>
-            <th>Company Name</th>
-            <th>Contact Name</th>
-            <th>Phone Number</th>
-            <th>Email</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>{{startup.industry}}</td>
-            <td>{{startup.name}}</td>
-            <td>{{startup.contact}}</td>
-            <td>{{startup.phone_number}}</td>
-            <td>{{startup.email}}</td>
-          </tr>
-        </tbody>
-      </table>
+<div class="container">
+    <div class="row">
+      <div class="col-md-5  toppad  pull-right col-md-offset-3 ">
+        <br>
+      </div>
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xs-offset-0 col-sm-offset-0 col-md-offset-3 col-lg-offset-3 toppad" >
+      <div class="panel panel-info">
+        <div class="panel-heading">
+          <h3 class="panel-title">{{startup.name}}</h3>
+        </div>
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-md-3 col-lg-3 " align="center"> <img alt="User Pic" src="http://babyinfoforyou.com/wp-content/uploads/2014/10/avatar-300x300.png" class="img-circle img-responsive"> </div>
+          <div class="row">
+              <div class="col-md-12">
+              </div>
+          </div>
+          <div class=" col-md-9 col-lg-9 ">
+            <table class="table table-user-information">
+              <tbody>
+                <!-- <tr>
+              <th>Business Industry:</th>
+              <td>{{startup.industry}}</td>
+            </tr> -->
 
-      <a class="btn btn-danger pull-right" ng-click="deleteStartup()"><span class="glyphicon glyphicon-remove"></span> Delete</a>
-      <a class="btn btn-warning pull-right" ng-click="editStartup()" style="margin-right: 5px;"><span class="glyphicon glyphicon-pencil"></span> Edit</a>
-      <a class="btn btn-default pull-left" href="/#/startups"><span class="glyphicon glyphicon-chevron-left"></span> Back</a>
+                <tr>
+                  <th>Contact Name</th>
+                  <td>{{startup.contact}}</td>
+                </tr>
+                <tr>
+                  <th>Phone Number</th>
+                  <td>{{startup.phone_number}}</td>
+                </tr>
+                <tr>
+
+                  <th><i class="glyphicon glyphicon-envelope"></i>Email</th>
+                  <td>{{startup.email}}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="panel-footer" style="height: 70px">
+        <a class="btn btn-danger pull-right" ng-click="deleteStartup()"><span class="glyphicon glyphicon-remove"></span> Delete</a>
+        <a class="btn btn-warning pull-right" ng-click="editStartup()" style="margin-right: 5px;"><span class="glyphicon glyphicon-pencil"></span> Edit</a>
+        <a class="btn btn-default pull-left" href="/#/startups"><span class="glyphicon glyphicon-chevron-left"></span> Back</a>
+        </span>
+      </div>
     </div>
   </div>
+  </div>
+</div>
 </div>

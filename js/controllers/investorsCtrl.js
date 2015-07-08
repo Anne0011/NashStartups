@@ -23,14 +23,4 @@ myApp.controller('InvestorsCtrl', ['$scope', '$routeParams', '$location', '$fire
       $location.path('/investors');
     });
   };
-
-  // $scope.firms = [
-  //    {
-  //      industry: 'healthcare',
-  //      name: 'tristar technology ventures',
-  //      contact: 'foo bar',
-  //      phone_number: '615-555-5555',
-  //      email: 'fake@email.com'
-  //    }
-  // ];
 }]);

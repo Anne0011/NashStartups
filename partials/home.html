@@ -1,8 +1,18 @@
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <h2>Recent News</h2>
+      <div class="page-header">
+        <h2>Recent News <small>(10 most recent articles, <30 days)</small></h2>
+      </div>
+
+      <div ng-show="!articles.length">
+        <p class="text-muted"><span class="glyphicon glyphicon-sunglasses"></span> <em>Looks like nothings happened recently...</em></p>
+      </div>
     </div>
+  </div>
+
+  <div class="row" ng-repeat="article in articles | limitTo:10" ng-hide="!articles.length">
+
   </div>
 
   <div class="row">
@@ -11,7 +21,11 @@
         <h2>Recently Added Startups <small>(in the last week)</small></h2>
       </div>
 
-      <table class="table table-striped">
+      <div ng-show="!startups.length">
+        <p class="text-muted"><span class="glyphicon glyphicon-ice-lolly-tasted"></span> <em>Whoa. No new startups added in the last week...</em></p>
+      </div>
+
+      <table class="table table-striped" ng-hide="!startups.length">
         <thead>
           <tr>
             <th>Company Name</th>
@@ -28,7 +42,7 @@
             <td>{{startup.contact}}</td>
             <td>{{startup.phone}}</td>
             <td>{{startup.email}}</td>
-            <td><a href="/#/startup/{{firm.$id}}">GO!</a></td>
+            <td><a class="btn btn-default btn-sm" href="/#/startup/{{startup.$id}}">Profile</a></td>
           </tr>
         </tbody>
       </table>
@@ -39,7 +53,11 @@
         <h2>Recently Added Jobs <small>(in the last week)</small></h2>
       </div>
 
-      <table class="table table-striped">
+      <div ng-show="!jobs.length">
+        <p class="text-muted"><span class="glyphicon glyphicon-ice-lolly-tasted"></span> <em>Whoa. No new jobs added in the last week...</em></p>
+      </div>
+
+      <table class="table table-striped" ng-hide="!jobs.length">
         <thead>
           <tr>
             <th>Company Name</th>
@@ -56,7 +74,7 @@
             <td>{{job.contact}}</td>
             <td>{{job.phone}}</td>
             <td>{{job.email}}</td>
-            <td><a href="/#/investor/{{firm.$id}}">GO!</a></td>
+            <td><a class="btn btn-default btn-sm" href="/#/job/{{job.$id}}">Posting</a></td>
           </tr>
         </tbody>
       </table>

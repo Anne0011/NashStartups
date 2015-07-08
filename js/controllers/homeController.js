@@ -1,55 +1,13 @@
-myApp.controller("HomeCtrl", function ($scope) {
-  $scope.jobs = [
-    {
-      name: 'Octovis, Inc.',
-      contact: 'Ryan Macy',
-      email: 'ryan@octovis.com',
-      phone: '615-555-5555'
-    },
-    {
-      name: 'Octovis, Inc.',
-      contact: 'Ryan Macy',
-      email: 'ryan@octovis.com',
-      phone: '615-555-5555'
-    },
-    {
-      name: 'Octovis, Inc.',
-      contact: 'Ryan Macy',
-      email: 'ryan@octovis.com',
-      phone: '615-555-5555'
-    },
-    {
-      name: 'Octovis, Inc.',
-      contact: 'Ryan Macy',
-      email: 'ryan@octovis.com',
-      phone: '615-555-5555'
-    }
-  ];
+myApp.controller("HomeCtrl", ["$scope", "$firebaseArray", "FIREBASE", function ($scope, $firebaseArray, FIREBASE) {
+  $firebaseArray(FIREBASE.child("articles")).$loaded().then(function(v) {
+    $scope.articles = v;
+  });
 
-  $scope.startups = [
-    {
-      name: 'Octovis, Inc.',
-      contact: 'Ryan Macy',
-      email: 'ryan@octovis.com',
-      phone: '615-555-5555'
-    },
-    {
-      name: 'Octovis, Inc.',
-      contact: 'Ryan Macy',
-      email: 'ryan@octovis.com',
-      phone: '615-555-5555'
-    },
-    {
-      name: 'Octovis, Inc.',
-      contact: 'Ryan Macy',
-      email: 'ryan@octovis.com',
-      phone: '615-555-5555'
-    },
-    {
-      name: 'Octovis, Inc.',
-      contact: 'Ryan Macy',
-      email: 'ryan@octovis.com',
-      phone: '615-555-5555'
-    }
-  ];
-});
+  $firebaseArray(FIREBASE.child("startups")).$loaded().then(function(v) {
+    $scope.startups = v;
+  });
+
+  $firebaseArray(FIREBASE.child("jobs")).$loaded().then(function(v) {
+    $scope.jobs = v;
+  });
+}]);

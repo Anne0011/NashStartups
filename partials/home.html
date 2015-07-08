@@ -1,37 +1,65 @@
-<div class = "container-fluid" id="info">
+<div class="container">
   <div class="row">
-    <div id="Nashville"></div>
+    <div class="col-md-12">
+      <h2>Recent News</h2>
+    </div>
   </div>
 
   <div class="row">
-    <div class="col-lg-4 divborder" >
-        <h2 id="Dr"><i class="fa fa-road"></i>  Draw a Definitive Map</h2>
-        <ul class="fa-ul">
-        <li>Provide the definitive and most comprehensive guide to the industry</li>
-        <li>Extend our editor network</li>
-        <li>Build new tools and create comprehensive content in the startup industry.</li>
-        </ul>
+    <div class="col-md-6">
+      <div class="page-header">
+        <h2>Recently Added Startups <small>(in the last week)</small></h2>
+      </div>
+
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Company Name</th>
+            <th>Contact Name</th>
+            <th>Phone Number</th>
+            <th>Email</th>
+            <th>Profile</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr ng-repeat="startup in startups">
+            <td>{{startup.name}}</td>
+            <td>{{startup.contact}}</td>
+            <td>{{startup.phone}}</td>
+            <td>{{startup.email}}</td>
+            <td><a href="/#/startup/{{firm.$id}}">GO!</a></td>
+          </tr>
+        </tbody>
+      </table>
     </div>
 
-    <div class="col-lg-4 divborder">
-        <h2 id="Con"><i class="fa fa-users"></i>  Connect Key Players</h2>
-        <ul class="fa-ul">
-        <li>Create more connections within the industry.</li>
-        <li>Jobs, services providers, entrepreneur resources.</li>
-        <li>Locally sourced.</li>
-        <br>
-        </ul>
-    </div>
+    <div class="col-md-6">
+      <div class="page-header">
+        <h2>Recently Added Jobs <small>(in the last week)</small></h2>
+      </div>
 
-    <div class="col-lg-4 divborder">
-        <h2 id="En"><i class="fa fa-gears"></i>  Energize Nashville</h2>
-        <ul class="fa-ul">
-          <li>Actively support and promote the Nashville startup community.</li>
-          <li>Fund local meetups groups.</li>
-          <li>International visibility to local startups.</li>
-          <li>Facilitate job creation, create new companies, invigorate existing ones.</li>
-          <li>Attract capital and talent</li>
-        </ul>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Company Name</th>
+            <th>Contact Name</th>
+            <th>Phone Number</th>
+            <th>Email</th>
+            <th>Profile</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr ng-repeat="job in jobs">
+            <td>{{job.name}}</td>
+            <td>{{job.contact}}</td>
+            <td>{{job.phone}}</td>
+            <td>{{job.email}}</td>
+            <td><a href="/#/investor/{{firm.$id}}">GO!</a></td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>
 </div>

@@ -4,30 +4,90 @@
 <head>
     <meta charset="utf-8">
 
-    <title>Nash Startups List</title>
+    <title>Nashville Startups List</title>
 
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
-    <link href="/bower_components/angular-bootstrap-calendar/dist/css/angular-bootstrap-calendar.min.css" rel="stylesheet">
-    <link rel="stylesheet" href='/css/main.css'>
-    <link href='//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="//bootswatch.com/flatly/bootstrap.min.css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-    <link rel="icon" type="image/ico" href="images/guitar3.ico"/>
+    <link rel="stylesheet" href='/css/main.css'>
+
+    <link href='//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+
+    <link rel="icon" type="image/ico" href="/images/nashville.png"/>
 </head>
 
 <body ng-app='nash'>
-  <div ng-include src="'partials/navigation.html'" ng-controller="UserCtrl"></div>
 
-  <div ng-view></div>
+  <div id="wrapper">
 
+    <!-- Sidebar -->
+    <div id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+            <li class="sidebar-brand">
+                <a href="#">
+                    Start Bootstrap
+                </a>
+            </li>
+            <li>
+                <a href="/#/investors">Investors</a>
+            </li>
+            <li>
+                <a href="/#/startups">Startups</a>
+            </li>
+            <li>
+                <a href="/#/coworking">Coworking</a>
+            </li>
+            <li>
+                <a href="/#/coffee-shops">Coffee Shops</a>
+            </li>
+            <li>
+                <a href="/#/events">Jobs</a>
+            </li>
+            <li>
+                <a href="/#/events">Events</a>
+            </li>
+            <li>
+                <a href="/#/news">News</a>
+            </li>
+            <li>
+                <a href="/#/contact">Contact</a>
+            </li>
+        </ul>
+    </div>
+    <!-- /#sidebar-wrapper -->
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+      <a id="menu-toggle"><span class="glyphicon glyphicon-menu-hamburger"></span></a>
+
+      <div class="container">
+        <h1 class="lobsta" style="margin-bottom: 50px;"><img src="/images/nashville.png" height="60" width="60" /> Nashville Startup List</h1>
+
+        <div ng-view></div>
+
+      </div>
+    </div>
+    <!-- /#page-content-wrapper -->
+
+  </div>
+  <!-- /#wrapper -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <script src="//underscorejs.org/underscore-min.js"></script>
   <script src="/bower_components/angular/angular.js"></script>
   <script src="/bower_components/angular-route/angular-route.js"></script>
-  <script src="/bower_components/firebase/firebase.js"></script>
   <script src="/bower_components/checklist-model/checklist-model.js"></script>
+  <script src="/bower_components/firebase/firebase.js"></script>
   <script src="//cdn.firebase.com/libs/angularfire/1.1.1/angularfire.min.js"></script>
   <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.13.0.js"></script>
+
+  <script>
+    $("#menu-toggle").click(function(e) {
+      e.preventDefault();
+      $("#wrapper").toggleClass("toggled");
+    });
+  </script>
 
   <script src="/js/app.js"></script>
   <script src="/js/factories/authFactory.js"></script>

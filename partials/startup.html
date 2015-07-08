@@ -1,0 +1,28 @@
+<div class="page-header">
+  <h2>Startups <small>funded right here in Nashville, USA</small></h2>
+</div>
+
+<div class="bs-startup">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Business Industry</th>
+        <th>Company Name</th>
+        <th>Contact Name</th>
+        <th>Phone Number</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{startup.industry}}</td>
+        <td>{{startup.name}}</td>
+        <td>{{startup.contact}}</td>
+        <td>{{startup.phone_number}}</td>
+        <td>{{startup.email}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <a name="submit" class="btn btn-danger" ng-click="deleteStartup()">Delete</a>
+</div>
